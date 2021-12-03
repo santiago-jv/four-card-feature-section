@@ -1,0 +1,114 @@
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Poppins';
+    background-color: var(--very-light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.title-container{
+    margin-top:2rem;
+}
+
+.title-container__title{
+    color: var(--very-dark-blue);
+    margin:.4rem 0;
+}
+.title-container__title--light{
+    font-weight: 200;
+    
+}
+.title-container__title--bold{
+    font-weight: 600;
+}
+
+.description-container {
+    margin-top:.3rem;
+    max-width: 550px;
+    width:90%;
+}
+.description-container__description{
+    text-align: center;
+    color:var(--grayish-blue);
+}
+
+.cards-container{
+    margin:auto;
+    margin-top:1.4rem;
+    width:500px;
+    position:relative;
+}
+.cards-container__card{
+    width:90%;
+    max-width: 300px;
+    box-shadow: 5px 7px 10px 3px  hsl(234 12% 34% / .2);;
+    border-radius: 5px;
+    position:absolute;
+    padding: 1rem 1.5rem;
+    background-color:var(--very-light-gray );
+
+}
+
+.cards-container__card--left{
+    left:-300px;
+    border-top: 5px solid var(--cyan);
+    top:100px;
+}
+.cards-container__card--top{
+    left:calc(250px - 175px);
+    border-top: 5px solid var(--red);
+    
+}
+.cards-container__card--right{
+    left:450px;
+    border-top: 5px solid var(--blue);
+    top:100px;
+}
+.cards-container__card--bottom{
+    left:calc(250px - 175px);
+    border-top: 5px solid var(--orange);
+    top:220px;
+}
+
+.card__title-container__title{
+    color:var(--very-dark-blue);
+    font-weight: 600;
+}
+.card__description-container__description {
+    color:var(--grayish-blue );
+}
+
+.card__image-container {
+    width:100%;
+    display:flex;
+    justify-content: flex-end;    
+}
+
+
+@media screen and (max-width:1140px) {
+    .cards-container{
+        position:static;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+    .cards-container__card{
+        position:static;
+        margin-top:2rem;
+    
+    }
+}
